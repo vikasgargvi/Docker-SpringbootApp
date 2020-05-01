@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+        eureka:
+                image: vikasgarg/eureka:v1
+                restart: always
+                ports:
+                        - 8888:8888
+                volumes:
+                        - eureka_storage:/eureka-server
+                networks:
+                        mynet1:
+                                aliases:
+                                        - eureka-server
+        
+        zuul:
+                image: vikasgarg/zuul:v1
+                restart: always
+                ports:
+                        - 8762:8762
+                volumes:
+                        - zuul_storage:/zuul-server
+                networks:
+                        mynet1:
+                                aliases:
+                                        - zuul-server
+
+        service1:
+                image: vikasgarg/service1:v1
+                restart: always
+                volumes:
+                        - service1_storage:/AppServer
+                networks:
+                        mynet1:
+                                aliases:
+                                        - app1-server
+
+        service2:
+                image: vikasgarg/service2:v1
+                restart: always
+                volumes:
+                        - service2_storage:/AppServer
+                networks:
+                        mynet1:
+                                aliases:
+                                        - app2-server
+
+networks:
+        mynet1:
+                driver: bridge
+
+volumes:
+        eureka_storage: 
+        zuul_storage:
+        service1_storage:
+        service2_storage:
