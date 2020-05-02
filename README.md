@@ -41,7 +41,7 @@ service1 is running on port 8000 but we are accessing it on port 8762, because z
 
 wait for few seconds
 then,
-from your windows/macOS,
+from your windows/macOS:
 http://<ip addr of RHEL8>:8762/service1/
 http://<ip addr of RHEL8>:8762/service2/
 
