@@ -19,11 +19,9 @@ Docker Features used:
       - create seperate volumes for all
       - port mapping for (eureka server and zuul proxy server only)
       - run docker container
-
-
-
-- I'm running docker on VM RHEL 8, RHEL 8 is host machine for docker
+      
 # How to Use:
+I'm running docker on VM RHEL 8, RHEL 8 is host machine for docker
 1. start firewalld
 2. docker-compose up
 Wait until all the services is started successfully
