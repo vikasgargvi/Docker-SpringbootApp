@@ -47,8 +47,8 @@ from your windows/macOS:
 -http://ipAddrOfRHEL8:8762/service2/
 
 Here,
-ipAddrOfRHEL8 : request first goes to your RHEL8 VM machine
-port 8762: then req is forwarded to zuul server
-/service1: then service1 micro-service will be invoked
+- ipAddrOfRHEL8 : request first goes to your RHEL8 VM machine
+- port 8762: then req is forwarded to zuul server
+- /service1: then service1 micro-service will be invoked
 
 hence you will get your output
