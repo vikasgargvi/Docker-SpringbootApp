@@ -21,9 +21,8 @@ Docker Features used:
       - run docker container
 
 
---I'm running docker on VM RHEL 8, RHEL 8 is host machine for docker
 
-
+- I'm running docker on VM RHEL 8, RHEL 8 is host machine for docker
 # How to Use:
 1. start firewalld
 2. docker-compose up
